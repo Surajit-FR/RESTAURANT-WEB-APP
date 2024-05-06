@@ -1,0 +1,114 @@
+const [menuItems, setMenuItems] = useState<MenuCategory[]>([]);
+
+useEffect(() => {
+    // Simulated data for demonstration
+    const menuData: MenuCategory[] = [
+        {
+            id: "Burgers",
+            category: "Burgers",
+            categoryTitleImageSrc: "http://assets.suelo.pl/soup/img/photos/menu-title-burgers.jpg",
+            items: [
+                { name: "Beef Burger", description: "Beef, cheese, potato, onion, fries", price: 9.00, id: 1 },
+                { name: "Broccoli", description: "Chicken, cheese, potato, onion, fries", price: 9.00, id: 2 },
+                { name: "Chicken Burger", description: "Chicken, cheese, potato, onion, fries", price: 9.00, id: 3 },
+                { name: "Creste di Galli", description: "Pasta, cheese, potato, onion, fries", price: 9.00, id: 4 }
+            ]
+        },
+        {
+            id: "Pasta",
+            category: "Pasta",
+            categoryTitleImageSrc: "http://assets.suelo.pl/soup/img/photos/menu-title-pasta.jpg",
+            items: [
+                { name: "Beef Burger", description: "Beef, cheese, potato, onion, fries", price: 9.00, id: 1 },
+                { name: "Broccoli", description: "Chicken, cheese, potato, onion, fries", price: 9.00, id: 2 },
+                { name: "Chicken Burger", description: "Chicken, cheese, potato, onion, fries", price: 9.00, id: 3 },
+                { name: "Creste di Galli", description: "Pasta, cheese, potato, onion, fries", price: 9.00, id: 4 }
+            ]
+        },
+        {
+            id: "Pizza",
+            category: "Pizza",
+            categoryTitleImageSrc: "http://assets.suelo.pl/soup/img/photos/menu-title-pizza.jpg",
+            items: [
+                { name: "Beef Burger", description: "Beef, cheese, potato, onion, fries", price: 9.00, id: 1 },
+                { name: "Broccoli", description: "Chicken, cheese, potato, onion, fries", price: 9.00, id: 2 },
+                { name: "Chicken Burger", description: "Chicken, cheese, potato, onion, fries", price: 9.00, id: 3 },
+                { name: "Creste di Galli", description: "Pasta, cheese, potato, onion, fries", price: 9.00, id: 4 }
+            ]
+        },
+        {
+            id: "Sushi",
+            category: "Sushi",
+            categoryTitleImageSrc: "http://assets.suelo.pl/soup/img/photos/menu-title-sushi.jpg",
+            items: [
+                { name: "Beef Burger", description: "Beef, cheese, potato, onion, fries", price: 9.00, id: 1 },
+                { name: "Broccoli", description: "Chicken, cheese, potato, onion, fries", price: 9.00, id: 2 },
+                { name: "Chicken Burger", description: "Chicken, cheese, potato, onion, fries", price: 9.00, id: 3 },
+                { name: "Creste di Galli", description: "Pasta, cheese, potato, onion, fries", price: 9.00, id: 4 }
+            ]
+        },
+        {
+            id: "Desserts",
+            category: "Desserts",
+            categoryTitleImageSrc: "http://assets.suelo.pl/soup/img/photos/menu-title-desserts.jpg",
+            items: [
+                { name: "Beef Burger", description: "Beef, cheese, potato, onion, fries", price: 9.00, id: 1 },
+                { name: "Broccoli", description: "Chicken, cheese, potato, onion, fries", price: 9.00, id: 2 },
+                { name: "Chicken Burger", description: "Chicken, cheese, potato, onion, fries", price: 9.00, id: 3 },
+                { name: "Creste di Galli", description: "Pasta, cheese, potato, onion, fries", price: 9.00, id: 4 }
+            ]
+        },
+        {
+            id: "Drinks",
+            category: "Drinks",
+            categoryTitleImageSrc: "http://assets.suelo.pl/soup/img/photos/menu-title-rinks.jpg",
+            items: [
+                { name: "Beef Burger", description: "Beef, cheese, potato, onion, fries", price: 9.00, id: 1 },
+                { name: "Broccoli", description: "Chicken, cheese, potato, onion, fries", price: 9.00, id: 2 },
+                { name: "Chicken Burger", description: "Chicken, cheese, potato, onion, fries", price: 9.00, id: 3 },
+                { name: "Creste di Galli", description: "Pasta, cheese, potato, onion, fries", price: 9.00, id: 4 }
+            ]
+        },
+    ];
+    setMenuItems(menuData);
+}, []);
+
+
+{/* <!-- Page Content --> */ }
+{/* <div className="page-content">
+    <div className="container">
+        <div className="row no-gutters">
+            <div className="col-md-10 offset-md-1" role="tablist">
+                {menuItems?.map((category => {
+                    return (
+                        <div key={category.category} id={category.category} className="menu-category">
+                            <div className="menu-category-title collapse-toggle" role="tab"
+                                data-target={`#menu${category.category}Content`} data-toggle="collapse"
+                                aria-expanded="true">
+                                <div className="bg-image"><img src={(category?.categoryTitleImageSrc)?.toString()} alt="" /></div>
+                                <h2 className="title">{category.category}</h2>
+                            </div>
+                            <div id={`menu${category.category}Content`} className="menu-category-content collapse show">
+                                {category.items.map(item => (
+                                    <div key={item.id} className="menu-item menu-list-item">
+                                        <div className="row align-items-center">
+                                            <div className="col-sm-6 mb-2 mb-sm-0">
+                                                <h6 className="mb-0">{item.name}</h6>
+                                                <span className="text-muted text-sm">{item.description}</span>
+                                            </div>
+                                            <div className="col-sm-6 text-sm-right">
+                                                <span className="text-md mr-4"><span className="text-muted">from</span> ${item.price.toFixed(2)}</span>
+                                                <button className="btn btn-outline-secondary btn-sm"
+                                                    data-action="open-cart-modal" data-id={item.id}><span>Add to cart</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )
+                }))}
+            </div>
+        </div>
+    </div>
+</div> */}
