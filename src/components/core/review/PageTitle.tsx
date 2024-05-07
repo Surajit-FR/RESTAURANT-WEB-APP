@@ -15,4 +15,4 @@ const PageTitle = (): JSX.Element => {
     )
 }
 
-export default PageTitle
+export default PageTitle;

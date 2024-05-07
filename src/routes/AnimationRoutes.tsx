@@ -1,8 +1,12 @@
 import { useLocation } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+
 import Index from "../pages/Index";
 import MenuListCollapse from "../pages/others/MenuListCollapse";
-import { AnimatePresence } from "framer-motion";
+import MenuListNavigation from "../pages/others/MenuListNavigation";
+import MenuGridCollapse from "../pages/others/MenuGridCollapse";
+import MenuGridNavigation from "../pages/others/MenuGridNavigation";
 import PageOffer from "../components/core/PageOffer";
 import About from "../pages/others/About";
 import Service from "../pages/others/Service";
@@ -14,13 +18,36 @@ import OfferSingle from "../pages/others/OfferSingle";
 import ProductPage from "../pages/others/ProductPage";
 import Gallery from "../pages/others/Gallery";
 import Checkout from "../pages/others/Checkout";
-import MenuListNavigation from "../pages/others/MenuListNavigation";
-import MenuGridNavigation from "../pages/others/MenuGridNavigation";
-import MenuGridCollapse from "../pages/others/MenuGridCollapse";
 import Confirmation from "../pages/others/Confirmation";
 import Blogs from "../pages/others/Blogs";
 import BlogPost from "../pages/others/BlogPost";
 import BlogSlider from "../pages/others/BlogSlider";
+import { RouteData } from "../config/DataTypesInterface.config";
+
+
+// Define your route data as an array of objects
+const routesData: RouteData[] = [
+    { path: "/", component: <Index /> },
+    { path: "/menu/list/collapse", component: <MenuListCollapse /> },
+    { path: "/menu/list/navigation", component: <MenuListNavigation /> },
+    { path: "/menu/grid/collapse", component: <MenuGridCollapse /> },
+    { path: "/menu/grid/navigation", component: <MenuGridNavigation /> },
+    { path: "/page/offers", component: <PageOffer /> },
+    { path: "/page/about", component: <About /> },
+    { path: "/page/service", component: <Service /> },
+    { path: "/page/reviews", component: <Review /> },
+    { path: "/page/gallery", component: <Gallery /> },
+    { path: "/page/book/table", component: <BookTable /> },
+    { path: "/page/contact", component: <Contant /> },
+    { path: "/page/faq", component: <FAQ /> },
+    { path: "/page/offer/single", component: <OfferSingle /> },
+    { path: "/page/product", component: <ProductPage /> },
+    { path: "/page/checkout", component: <Checkout /> },
+    { path: "/page/confirmation", component: <Confirmation /> },
+    { path: "/page/blogs", component: <Blogs /> },
+    { path: "/page/blog/post", component: <BlogPost /> },
+    { path: "/page/blog/slider", component: <BlogSlider /> }
+];
 
 const AnimationRoutes = (): JSX.Element => {
     const location = useLocation();
@@ -28,30 +55,13 @@ const AnimationRoutes = (): JSX.Element => {
         <>
             <AnimatePresence>
                 <Routes location={location} key={location.pathname}>
-                    <Route path="/" element={<Index />} />
-                    <Route path="/menu/list/collapse" element={<MenuListCollapse />} />
-                    <Route path="/menu/list/navigation" element={<MenuListNavigation />} />
-                    <Route path="/menu/grid/collapse" element={<MenuGridCollapse />} />
-                    <Route path="/menu/grid/navigation" element={<MenuGridNavigation />} />
-                    <Route path="/page/offers" element={<PageOffer />} />
-                    <Route path="/page/about" element={<About />} />
-                    <Route path="/page/service" element={<Service />} />
-                    <Route path="/page/reviews" element={<Review />} />
-                    <Route path="/page/gallery" element={<Gallery />} />
-                    <Route path="/page/book/table" element={<BookTable />} />
-                    <Route path="/page/contact" element={<Contant />} />
-                    <Route path="/page/faq" element={<FAQ />} />
-                    <Route path="/page/offer/single" element={<OfferSingle />} />
-                    <Route path="/page/product" element={<ProductPage />} />
-                    <Route path="/page/checkout" element={<Checkout />} />
-                    <Route path="/page/confirmation" element={<Confirmation />} />
-                    <Route path="/page/blogs" element={<Blogs />} />
-                    <Route path="/page/blog/post" element={<BlogPost />} />
-                    <Route path="/page/blog/slider" element={<BlogSlider />} />
+                    {routesData?.map(route => (
+                        <Route key={route?.path} path={route?.path} element={route?.component} />
+                    ))}
                 </Routes>
             </AnimatePresence>
         </>
-    )
-}
+    );
+};
 
-export default AnimationRoutes
+export default AnimationRoutes;

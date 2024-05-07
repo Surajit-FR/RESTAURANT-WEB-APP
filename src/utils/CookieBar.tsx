@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import Cookies from "js-cookie";
 
 const CookieBar = (): JSX.Element => {
-    const [acceptedCookies, setAcceptedCookies] = useState(Cookies.get("CyberMindCookies"));
-    const [isCookieVisible, setIsCookieVisible] = useState(!acceptedCookies); // Initially show if cookies not accepted
+    const [acceptedCookies, setAcceptedCookies] = useState<string | undefined>(Cookies.get("CyberMindCookies"));
+    const [isCookieVisible, setIsCookieVisible] = useState<boolean>(!acceptedCookies); // Initially show if cookies not accepted
 
     useEffect(() => {
         // Check if the user has already accepted cookies

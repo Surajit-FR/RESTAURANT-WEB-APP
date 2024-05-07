@@ -16,25 +16,25 @@ export interface CookieBarProps {
 export interface VideoModalProps {
     videoUrl: string;
     onClose: () => void;
-}
+};
 // ProductModalProps
 export interface ProductModalProps {
     page: string;
-}
+};
 // MenuItem
 export interface MenuItem {
     name: string;
     description: string;
     price: number;
     id: number;
-}
+};
 // MenuCategory
 export interface MenuCategory {
     id: string;
     category: string;
     categoryTitleImageSrc: string;
     items: MenuItem[];
-}
+};
 // SectionContent
 export interface SectionContent {
     title: string;
@@ -47,7 +47,7 @@ export interface SectionContent {
         src: string;
         alt: string;
     };
-}
+};
 // SectionData
 export interface SectionData {
     section: {
@@ -57,4 +57,9 @@ export interface SectionData {
             }[];
         };
     };
-}
+};
+// Define a type for your route data
+export type RouteData = {
+    path: string;
+    component: JSX.Element;
+};

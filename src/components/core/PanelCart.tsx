@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { onClickCartHandler } from "../../helpers/onClickCartHandler";
+import { useState } from "react";
+import ProductModal from "../../utils/ProductModal";
 
 const PanelCart = (): JSX.Element => {
+    const [page, setPage] = useState<string>("SectionMain");
 
     return (
         <>
@@ -17,23 +20,23 @@ const PanelCart = (): JSX.Element => {
                             <tbody>
                                 <tr>
                                     <td className="title">
-                                        <span className="name"><Link to="#product-modal" data-toggle="modal">Beef Burger</Link></span>
+                                        <span className="name"><Link to="#product-modal" data-bs-toggle="modal" data-bs-target={`#exampleModal${page}`} onClick={() => setPage('Large_Beef_Burger')}>Beef Burger</Link></span>
                                         <span className="caption text-muted">Large (500g)</span>
                                     </td>
                                     <td className="price">$9.00</td>
                                     <td className="actions">
-                                        <Link to="#product-modal" data-toggle="modal" className="action-icon"><i className="ti ti-pencil"></i></Link>
+                                        <Link to="#product-modal" data-bs-toggle="modal" data-bs-target={`#exampleModal${page}`} onClick={() => setPage('Large_Beef_Burger_icon')} className="action-icon"><i className="ti ti-pencil"></i></Link>
                                         <Link to="#" className="action-icon"><i className="ti ti-close"></i></Link>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="title">
-                                        <span className="name"><Link to="#product-modal" data-toggle="modal">Extra Burger</Link></span>
+                                        <span className="name"><Link to="#product-modal" data-bs-toggle="modal" data-bs-target={`#exampleModal${page}`} onClick={() => setPage('Small_Extra_Burger')}>Extra Burger</Link></span>
                                         <span className="caption text-muted">Small (200g)</span>
                                     </td>
                                     <td className="price text-success">$9.00</td>
                                     <td className="actions">
-                                        <Link to="#product-modal" data-toggle="modal" className="action-icon"><i className="ti ti-pencil"></i></Link>
+                                        <Link to="#product-modal" data-bs-toggle="modal" data-bs-target={`#exampleModal${page}`} onClick={() => setPage('Small_Extra_Burger_icon')} className="action-icon"><i className="ti ti-pencil"></i></Link>
                                         <Link to="#" className="action-icon"><i className="ti ti-close"></i></Link>
                                     </td>
                                 </tr>
@@ -65,6 +68,11 @@ const PanelCart = (): JSX.Element => {
             </div>
 
             <div id="body-overlay" onClick={onClickCartHandler}></div>
+
+            {/* Product Modal */}
+            <ProductModal
+                page={page}
+            />
         </>
     )
 }

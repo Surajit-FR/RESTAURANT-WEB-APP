@@ -1,6 +1,26 @@
+import { useState } from "react";
 import { ProductModalProps } from "../config/DataTypesInterface.config"
 
 const ProductModal = ({ page }: ProductModalProps): JSX.Element => {
+    const [sizeChecked, setSizeChecked] = useState<boolean>(false);
+    const [additionsChecked, setAdditionsChecked] = useState<boolean>(false);
+    const [otherChecked, setOtherChecked] = useState<boolean>(false);
+
+    const handleAnchorClick = (section: string) => {
+        switch (section) {
+            case "size":
+                setSizeChecked(!sizeChecked);
+                break;
+            case "additions":
+                setAdditionsChecked(!additionsChecked);
+                break;
+            case "other":
+                setOtherChecked(!otherChecked);
+                break;
+            default:
+                break;
+        }
+    };
 
     return (
         <>
@@ -28,10 +48,18 @@ const ProductModal = ({ page }: ProductModalProps): JSX.Element => {
                             <div className="panel-details panel-details-size">
                                 <h5 className="panel-details-title">
                                     <label className="custom-control custom-radio">
-                                        <input name="radio_title_size" type="radio" className="custom-control-input" />
+                                        <input
+                                            name="radio_title_size"
+                                            type="radio"
+                                            className="custom-control-input"
+                                            checked={sizeChecked}
+                                            onChange={() => setSizeChecked(!sizeChecked)}
+                                        />
                                         <span className="custom-control-indicator"></span>
                                     </label>
-                                    <a href="#panel-details-sizes-list" data-toggle="collapse">Size</a>
+                                    <a href="#panel-details-sizes-list" data-toggle="collapse" onClick={() => handleAnchorClick("size")}>
+                                        Size
+                                    </a>
                                 </h5>
                                 <div id="panel-details-sizes-list" className="collapse show">
                                     <div className="panel-details-content">
@@ -65,10 +93,18 @@ const ProductModal = ({ page }: ProductModalProps): JSX.Element => {
                             <div className="panel-details panel-details-additions">
                                 <h5 className="panel-details-title">
                                     <label className="custom-control custom-radio">
-                                        <input name="radio_title_additions" type="radio" className="custom-control-input" />
+                                        <input
+                                            name="radio_title_additions"
+                                            type="radio"
+                                            className="custom-control-input"
+                                            checked={additionsChecked}
+                                            onChange={() => setAdditionsChecked(!additionsChecked)}
+                                        />
                                         <span className="custom-control-indicator"></span>
                                     </label>
-                                    <a href="#panel-details-additions-content" data-toggle="collapse">Additions</a>
+                                    <a href="#panel-details-additions-content" data-toggle="collapse" onClick={() => handleAnchorClick("additions")}>
+                                        Additions
+                                    </a>
                                 </h5>
                                 <div id="panel-details-additions-content" className="collapse">
                                     <div className="panel-details-content">
@@ -121,10 +157,18 @@ const ProductModal = ({ page }: ProductModalProps): JSX.Element => {
                             <div className="panel-details panel-details-form">
                                 <h5 className="panel-details-title">
                                     <label className="custom-control custom-radio">
-                                        <input name="radio_title_other" type="radio" className="custom-control-input" />
+                                        <input
+                                            name="radio_title_other"
+                                            type="radio"
+                                            className="custom-control-input"
+                                            checked={otherChecked}
+                                            onChange={() => setOtherChecked(!otherChecked)}
+                                        />
                                         <span className="custom-control-indicator"></span>
                                     </label>
-                                    <a href="#panel-details-other" data-toggle="collapse">Other</a>
+                                    <a href="#panel-details-other" data-toggle="collapse" onClick={() => handleAnchorClick("other")}>
+                                        Other
+                                    </a>
                                 </h5>
                                 <div id="panel-details-other" className="collapse">
                                     <form action="#">

@@ -158,7 +158,7 @@ const HeaderTop = (): JSX.Element => {
                                 </ul>
                             </nav>
                             <div className="module left">
-                                <Link to="/menu/list" className="btn btn-outline-secondary"><span>Order</span></Link>
+                                <Link to="/menu/list/navigation" className="btn btn-outline-secondary"><span>Order</span></Link>
                             </div>
                         </div>
                         <div className="col-md-2">
