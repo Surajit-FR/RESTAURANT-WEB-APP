@@ -1,6 +1,23 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
+import ReactPagination from "../../../utils/ReactPagination";
 
 const PageContent = (): JSX.Element => {
+    const [pageNumber, setPageNumber] = useState<number>(0);
+    const blogData: Array<number> = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+    // pagination
+    const dataPerPage = 5;
+    const pagesVisited = pageNumber * dataPerPage;
+    const newBlogData = blogData?.slice(pagesVisited, pagesVisited + dataPerPage); // will be looped for show data
+    const pageCount = Math.ceil((blogData?.length || 0) / dataPerPage);
+
+    const changePage = ({ selected }: { selected: number }) => {
+        setPageNumber(selected);
+    };
+
+    console.log({ newBlogData });
+
     return (
         <>
             {/* <!-- Page Content --> */}
@@ -76,23 +93,10 @@ const PageContent = (): JSX.Element => {
                             </article>
                             {/* <!-- Pagination --> */}
                             <nav aria-label="Page navigation" className="mt-5">
-                                <ul className="pagination justify-content-center">
-                                    <li className="page-item">
-                                        <Link className="page-link" to="#" aria-label="Previous">
-                                            <i className="ti ti-arrow-left"></i>
-                                            <span className="sr-only">Previous</span>
-                                        </Link>
-                                    </li>
-                                    <li className="page-item"><Link className="page-link active" to="#">1</Link></li>
-                                    <li className="page-item"><Link className="page-link" to="#">2</Link></li>
-                                    <li className="page-item"><Link className="page-link" to="#">3</Link></li>
-                                    <li className="page-item">
-                                        <Link className="page-link" to="#" aria-label="Next">
-                                            <i className="ti ti-arrow-right"></i>
-                                            <span className="sr-only">Next</span>
-                                        </Link>
-                                    </li>
-                                </ul>
+                                <ReactPagination
+                                    pageCount={pageCount}
+                                    changePage={changePage}
+                                />
                             </nav>
                         </div>
                     </div>
