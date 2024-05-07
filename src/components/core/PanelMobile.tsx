@@ -25,6 +25,11 @@ const PanelMobile = (): JSX.Element => {
         e.stopPropagation();
     };
 
+    // Function to close the panel
+    const closePanel = () => {
+        togglePanelMobile(isPanelMobileOpen, setIsPanelMobileOpen);
+    };
+
     return (
         <>
             {/* Overlay */}
@@ -33,7 +38,7 @@ const PanelMobile = (): JSX.Element => {
             {/* Panel Mobile */}
             <nav id="panel-mobile">
                 <div className="module module-logo bg-dark dark">
-                    <Link to="/">
+                    <Link to="/" onClick={closePanel}>
                         <img src="/assets/img/logo-light.svg" alt="" width="88" />
                     </Link>
                     <button className="close" data-toggle="panel-mobile" onClick={() => togglePanelMobile(isPanelMobileOpen, setIsPanelMobileOpen)}><i className="ti ti-close"></i></button>
@@ -44,12 +49,12 @@ const PanelMobile = (): JSX.Element => {
                             <Link to="#">Home</Link>
                             <div className="dropdown-container" style={{ display: dropdownStates['home'] ? "block" : "none" }}>
                                 <ul>
-                                    <li><Link to="/">Home Basic</Link></li>
-                                    <li><Link to="#">Home Burgers</Link></li>
-                                    <li><Link to="#">Home Fullwidth Slider</Link></li>
-                                    <li><Link to="#">Home Video</Link></li>
-                                    <li><Link to="#">Home Fresh <span className="badge badge-success">New</span></Link></li>
-                                    <li><Link to="#">Home Dark <span className="badge badge-success">New</span></Link></li>
+                                    <li><Link to="/" onClick={closePanel}>Home Basic</Link></li>
+                                    <li><Link to="#" onClick={closePanel}>Home Burgers</Link></li>
+                                    <li><Link to="#" onClick={closePanel}>Home Fullwidth Slider</Link></li>
+                                    <li><Link to="#" onClick={closePanel}>Home Video</Link></li>
+                                    <li><Link to="#" onClick={closePanel}>Home Fresh <span className="badge badge-success">New</span></Link></li>
+                                    <li><Link to="#" onClick={closePanel}>Home Dark <span className="badge badge-success">New</span></Link></li>
                                 </ul>
                             </div>
                         </li>
@@ -57,13 +62,13 @@ const PanelMobile = (): JSX.Element => {
                             <Link to="#">About</Link>
                             <div className="dropdown-container" style={{ display: dropdownStates['about'] ? "block" : "none" }}>
                                 <ul className="dropdown-mega">
-                                    <li><Link to="/page/about">About Us</Link></li>
-                                    <li><Link to="/page/services">Services</Link></li>
-                                    <li><Link to="/page/gallery">Gallery</Link></li>
-                                    <li><Link to="/page/reviews">Reviews</Link></li>
-                                    <li><Link to="/page/faq">FAQ</Link></li>
-                                    <li><Link to="/page/offer/single">Offer Single</Link></li>
-                                    <li><Link to="/page/product">Product</Link></li>
+                                    <li><Link to="/page/about" onClick={closePanel}>About Us</Link></li>
+                                    <li><Link to="/page/services" onClick={closePanel}>Services</Link></li>
+                                    <li><Link to="/page/gallery" onClick={closePanel}>Gallery</Link></li>
+                                    <li><Link to="/page/reviews" onClick={closePanel}>Reviews</Link></li>
+                                    <li><Link to="/page/faq" onClick={closePanel}>FAQ</Link></li>
+                                    <li><Link to="/page/offer/single" onClick={closePanel}>Offer Single</Link></li>
+                                    <li><Link to="/page/product" onClick={closePanel}>Product</Link></li>
                                 </ul>
                                 <div className="dropdown-image">
                                     <img src="http://assets.suelo.pl/soup/img/photos/dropdown-about.jpg" alt="" />
@@ -77,34 +82,34 @@ const PanelMobile = (): JSX.Element => {
                                     <li className="has-dropdown" onClick={(e) => { toggleDropdown('menuList'); stopPropagation(e); }}>
                                         <Link to="#">List</Link>
                                         <ul style={{ display: dropdownStates['menuList'] ? "block" : "none" }}>
-                                            <li><Link to="/menu/list/navigation">Navigation</Link></li>
-                                            <li><Link to="/menu/list/collapse">Collapse</Link></li>
+                                            <li><Link to="/menu/list/navigation" onClick={closePanel}>Navigation</Link></li>
+                                            <li><Link to="/menu/list/collapse" onClick={closePanel}>Collapse</Link></li>
                                         </ul>
                                     </li>
                                     <li className="has-dropdown" onClick={(e) => { toggleDropdown('menuGrid'); stopPropagation(e); }}>
                                         <Link to="#">Grid</Link>
                                         <ul style={{ display: dropdownStates['menuGrid'] ? "block" : "none" }}>
-                                            <li><Link to="/menu/grid/navigation">Navigation</Link></li>
-                                            <li><Link to="/menu/grid/collapse">Collapse</Link></li>
+                                            <li><Link to="/menu/grid/navigation" onClick={closePanel}>Navigation</Link></li>
+                                            <li><Link to="/menu/grid/collapse" onClick={closePanel}>Collapse</Link></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li><Link to="/page/offers">Offers</Link></li>
-                        <li><Link to="/page/contact">Contact</Link></li>
+                        <li><Link to="/page/offers" onClick={closePanel}>Offers</Link></li>
+                        <li><Link to="/page/contact" onClick={closePanel}>Contact</Link></li>
                         <li className="has-dropdown" onClick={() => toggleDropdown('more')}>
                             <Link to="#">More</Link>
                             <div className="dropdown-container" style={{ display: dropdownStates['more'] ? "block" : "none" }}>
                                 <ul className="dropdown-mega">
-                                    <li><Link to="/page/offer/single">Offer single</Link></li>
-                                    <li><Link to="/page/product">Product</Link></li>
-                                    <li><Link to="/page/book/table">Book a table</Link></li>
-                                    <li><Link to="/page/checkout">Checkout</Link></li>
-                                    <li><Link to="/page/confirmation">Confirmation</Link></li>
-                                    <li><Link to="/page/blogs">Blog</Link></li>
-                                    <li><Link to="/page/blog/slider">Blog + Sidebar</Link></li>
-                                    <li><Link to="/page/blog/post">Blog Post</Link></li>
+                                    <li><Link to="/page/offer/single" onClick={closePanel}>Offer single</Link></li>
+                                    <li><Link to="/page/product" onClick={closePanel}>Product</Link></li>
+                                    <li><Link to="/page/book/table" onClick={closePanel}>Book a table</Link></li>
+                                    <li><Link to="/page/checkout" onClick={closePanel}>Checkout</Link></li>
+                                    <li><Link to="/page/confirmation" onClick={closePanel}>Confirmation</Link></li>
+                                    <li><Link to="/page/blogs" onClick={closePanel}>Blog</Link></li>
+                                    <li><Link to="/page/blog/slider" onClick={closePanel}>Blog + Sidebar</Link></li>
+                                    <li><Link to="/page/blog/post" onClick={closePanel}>Blog Post</Link></li>
                                 </ul>
                                 <div className="dropdown-image">
                                     <img src="http://assets.suelo.pl/soup/img/photos/dropdown-more.jpg" alt="" />
