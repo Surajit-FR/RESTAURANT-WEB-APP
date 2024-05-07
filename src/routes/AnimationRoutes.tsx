@@ -16,6 +16,11 @@ import Gallery from "../pages/others/Gallery";
 import Checkout from "../pages/others/Checkout";
 import MenuListNavigation from "../pages/others/MenuListNavigation";
 import MenuGridNavigation from "../pages/others/MenuGridNavigation";
+import MenuGridCollapse from "../pages/others/MenuGridCollapse";
+import Confirmation from "../pages/others/Confirmation";
+import Blogs from "../pages/others/Blogs";
+import BlogPost from "../pages/others/BlogPost";
+import BlogSlider from "../pages/others/BlogSlider";
 
 const AnimationRoutes = (): JSX.Element => {
     const location = useLocation();
@@ -26,6 +31,7 @@ const AnimationRoutes = (): JSX.Element => {
                     <Route path="/" element={<Index />} />
                     <Route path="/menu/list/collapse" element={<MenuListCollapse />} />
                     <Route path="/menu/list/navigation" element={<MenuListNavigation />} />
+                    <Route path="/menu/grid/collapse" element={<MenuGridCollapse />} />
                     <Route path="/menu/grid/navigation" element={<MenuGridNavigation />} />
                     <Route path="/page/offers" element={<PageOffer />} />
                     <Route path="/page/about" element={<About />} />
@@ -38,6 +44,10 @@ const AnimationRoutes = (): JSX.Element => {
                     <Route path="/page/offer/single" element={<OfferSingle />} />
                     <Route path="/page/product" element={<ProductPage />} />
                     <Route path="/page/checkout" element={<Checkout />} />
+                    <Route path="/page/confirmation" element={<Confirmation />} />
+                    <Route path="/page/blogs" element={<Blogs />} />
+                    <Route path="/page/blog/post" element={<BlogPost />} />
+                    <Route path="/page/blog/slider" element={<BlogSlider />} />
                 </Routes>
             </AnimatePresence>
         </>

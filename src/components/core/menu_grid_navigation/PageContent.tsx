@@ -101,7 +101,8 @@ const PageContent = (): JSX.Element => {
                                                             data-bs-target={`#exampleModal${page}`}
                                                             onClick={() => setPage("Grid_Navigation_Burgers_Broccoli")}
                                                         ><span>Add to cart</span>
-                                                        </button></div>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -125,7 +126,8 @@ const PageContent = (): JSX.Element => {
                                                             data-bs-target={`#exampleModal${page}`}
                                                             onClick={() => setPage("Grid_Navigation_Burgers_Chicken_Burger")}
                                                         ><span>Add to cart</span>
-                                                        </button></div>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -149,7 +151,8 @@ const PageContent = (): JSX.Element => {
                                                             data-bs-target={`#exampleModal${page}`}
                                                             onClick={() => setPage("Grid_Navigation_Burgers_Creste_di_Galli")}
                                                         ><span>Add to cart</span>
-                                                        </button></div>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -230,10 +233,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>9.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="1"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Pasta_Beef_Burger")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -250,10 +258,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>9.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="2"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Pasta_Broccoli")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -270,10 +283,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>14.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="3"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Pasta_Chicken_Burger")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -290,10 +308,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>13.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="4"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Pasta_Creste_di_Galli")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -310,10 +333,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>13.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="5"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Pasta_Chicken_wings")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -330,10 +358,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>13.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="6"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Pasta_Nigiri_sushi")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -364,10 +397,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>9.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="1"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Pizza_Beef_Burger")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -384,10 +422,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>9.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="2"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Pizza_Broccoli")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -404,10 +447,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>14.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="3"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Pizza_Chicken_Burger")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -424,10 +472,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>13.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="4"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Pizza_Creste_di_Galli")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -444,10 +497,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>13.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="5"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Pizza_Chicken_wings")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -464,10 +522,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>13.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="6"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Pizza_Nigiri_sushi")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -498,10 +561,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>9.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="1"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Sushi_Beef_Burger")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -518,10 +586,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>9.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="2"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Sushi_Broccoli")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -538,10 +611,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>14.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="3"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Sushi_Chicken_Burger")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -558,10 +636,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>13.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="4"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Sushi_Creste_di_Galli")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -578,10 +661,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>13.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="5"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Sushi_Chicken_wings")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -598,10 +686,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>13.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="6"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Sushi_Nigiri_sushi")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -632,10 +725,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>9.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="1"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Desserts_Beef_Burger")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -652,10 +750,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>9.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="2"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Desserts_Broccoli")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -672,10 +775,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>14.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="3"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Desserts_Chicken_Burger")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -692,10 +800,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>13.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="4"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Desserts_Creste_di_Galli")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -712,10 +825,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>13.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="5"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Desserts_Chicken_wings")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -732,10 +850,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>13.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="6"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Desserts_Nigiri_sushi")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -766,10 +889,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>9.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="1"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Drinks_Beef_Burger")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -786,10 +914,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>9.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="2"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Drinks_Broccoli")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -806,10 +939,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>14.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="3"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Drinks_Chicken_Burger")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -826,10 +964,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>13.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="4"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Drinks_Creste_di_Galli")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -846,10 +989,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>13.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="5"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Drinks_Chicken_wings")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -866,10 +1014,15 @@ const PageContent = (): JSX.Element => {
                                                     <div className="col-sm-6"><span className="text-md mr-4"><span
                                                         className="text-muted">from</span> $<span
                                                             data-product-base-price>13.00</span></span></div>
-                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0"><button
-                                                        className="btn btn-outline-secondary btn-sm"
-                                                        data-action="open-cart-modal" data-id="6"><span>Add to
-                                                            cart</span></button></div>
+                                                    <div className="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                        <button
+                                                            className="btn btn-outline-secondary btn-sm"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target={`#exampleModal${page}`}
+                                                            onClick={() => setPage("Grid_Navigation_Drinks_Nigiri_sushi")}
+                                                        ><span>Add to cart</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

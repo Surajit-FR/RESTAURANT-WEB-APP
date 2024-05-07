@@ -85,7 +85,7 @@ const PanelMobile = (): JSX.Element => {
                                         <Link to="#">Grid</Link>
                                         <ul style={{ display: dropdownStates['menuGrid'] ? "block" : "none" }}>
                                             <li><Link to="/menu/grid/navigation">Navigation</Link></li>
-                                            <li><Link to="menu-grid-collapse.html">Collapse</Link></li>
+                                            <li><Link to="/menu/grid/collapse">Collapse</Link></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -101,11 +101,10 @@ const PanelMobile = (): JSX.Element => {
                                     <li><Link to="/page/product">Product</Link></li>
                                     <li><Link to="/page/book/table">Book a table</Link></li>
                                     <li><Link to="/page/checkout">Checkout</Link></li>
-                                    <li><Link to="confirmation">Confirmation</Link></li>
-                                    <li><Link to="blog">Blog</Link></li>
-                                    <li><Link to="blog-sidebar">Blog + Sidebar</Link></li>
-                                    <li><Link to="blog-post">Blog Post</Link></li>
-                                    <li><Link to="documentation/" target="_blank">Documentation</Link></li>
+                                    <li><Link to="/page/confirmation">Confirmation</Link></li>
+                                    <li><Link to="/page/blogs">Blog</Link></li>
+                                    <li><Link to="/page/blog/slider">Blog + Sidebar</Link></li>
+                                    <li><Link to="/page/blog/post">Blog Post</Link></li>
                                 </ul>
                                 <div className="dropdown-image">
                                     <img src="http://assets.suelo.pl/soup/img/photos/dropdown-more.jpg" alt="" />
