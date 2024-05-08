@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import ReactGoogleMap from "../../../utils/ReactGoogleMap"
 
 const PageContent = (): JSX.Element => {
     return (
@@ -32,25 +33,12 @@ const PageContent = (): JSX.Element => {
                             <Link to="#" className="icon icon-social icon-circle icon-sm icon-instagram mr-1"><i className="fa fa-instagram"></i></Link>
                         </div>
                         <div className="col-lg-5 offset-lg-2 col-md-6">
-                            <div className="google-map h-500 shadow" data-lat="50.064651" data-lon="19.944981">
-                                {/* <div style={{
-                                    height: "100%",
-                                    width: "100%",
-                                    position: "absolute",
-                                    top: "0px",
-                                    left: "0px",
-                                    backgroundColor: "rgb(229, 227, 223)"
-                                }}>
-                                    <div className="gm-err-container">
-                                        <div className="gm-err-content">
-                                            <div className="gm-err-icon">
-                                                <img src="http://maps.gstatic.com/mapfiles/api-3/images/icon_error.png" alt="" draggable="false" style={{ userSelect: "none" }} />
-                                            </div>
-                                            <div className="gm-err-title">Oops! Something went wrong.</div>
-                                            <div className="gm-err-message">This page didn't load Google Maps correctly. See the JavaScript console for technical details.</div>
-                                        </div>
-                                    </div>
-                                </div> */}
+                            <div className="google-map h-500 shadow">
+                                {/* Google Map */}
+                                <ReactGoogleMap
+                                    lat={50.064651}
+                                    lng={19.944981}
+                                />
                             </div>
                         </div>
                     </div>
@@ -86,7 +74,13 @@ const PageContent = (): JSX.Element => {
                             <Link to="#" className="icon icon-social icon-circle icon-sm icon-instagram mr-1"><i className="fa fa-instagram"></i></Link>
                         </div>
                         <div className="col-lg-5 offset-lg-1 col-md-6">
-                            <div className="google-map h-500 shadow" data-lat="52.229675" data-lon="21.012230"></div>
+                            <div className="google-map h-500 shadow">
+                                {/* Google Map */}
+                                <ReactGoogleMap
+                                    lat={52.229675}
+                                    lng={21.012230}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -94,6 +88,6 @@ const PageContent = (): JSX.Element => {
 
         </>
     )
-}
+};
 
-export default PageContent
+export default PageContent;

@@ -63,3 +63,15 @@ export type RouteData = {
     path: string;
     component: JSX.Element;
 };
+
+// mapContainerStyle_dataType
+export type GoogleMapContainerStyle = {
+    height: string;
+    width: string;
+    aspectRatio: number;
+};
+// Define props interface
+export interface GoogleMap_Props {
+    lat: number;
+    lng: number;
+}
